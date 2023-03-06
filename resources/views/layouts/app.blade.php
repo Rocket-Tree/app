@@ -8,6 +8,8 @@
     @stack('stylesheets')
     <title>Document</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <style>
         .gradient {background: linear-gradient(90deg, #2a5a2a 20%, #30df24 100%);}
     </style>
