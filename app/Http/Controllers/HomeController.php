@@ -8,8 +8,16 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $content = 'hola';
+        return view('home');
+    }
 
-        return view('home', compact('content'));
+    public function lang(string $lang)
+    {
+        if(in_array($lang, config('app.supported_locales'))){
+            app()->setLocale($lang);
+            session()->put('locale', $lang);
+        }
+
+        return redirect()->back();
     }
 }
