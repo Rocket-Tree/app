@@ -23,7 +23,6 @@
 var scrollpos = window.scrollY;
 var header = document.getElementById("header");
 var navcontent = document.getElementById("nav-content");
-var navaction = document.getElementById("navAction");
 var brandname = document.getElementById("brandname");
 var toToggle = document.querySelectorAll(".toggleColour");
 
@@ -33,10 +32,6 @@ document.addEventListener("scroll", function () {
 
     if (scrollpos > 10) {
     header.classList.add("bg-white");
-    navaction.classList.remove("bg-white");
-    navaction.classList.add("gradient");
-    navaction.classList.remove("text-gray-800");
-    navaction.classList.add("text-white");
     //Use to switch toggleColour colours
     for (var i = 0; i < toToggle.length; i++) {
         toToggle[i].classList.add("text-gray-800");
@@ -46,11 +41,7 @@ document.addEventListener("scroll", function () {
     navcontent.classList.remove("bg-gray-100");
     navcontent.classList.add("bg-white");
     } else {
-    header.classList.remove("bg-white");
-    navaction.classList.remove("gradient");
-    navaction.classList.add("bg-white");
-    navaction.classList.remove("text-white");
-    navaction.classList.add("text-gray-800");
+    //header.classList.remove("bg-white");
     //Use to switch toggleColour colours
     for (var i = 0; i < toToggle.length; i++) {
         toToggle[i].classList.add("text-white");
