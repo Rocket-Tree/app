@@ -2,5 +2,8 @@
     "home": "Inicio",
     "about": "Nosotros",
     "contact": "Contacto",
-    "home.title" : "Software a tu medida"
+    "home.title": "Software a tu medida",
+    "home.bigContainer.title": "Usando la tecnología a tu favor",
+    "home.bigContainer.main": "Transformación digital de vanguardia",
+    "home.bigContainer.downText": "Comienza ya y contáctanos!<br> La mejor forma de impusar tu negocio"
 }

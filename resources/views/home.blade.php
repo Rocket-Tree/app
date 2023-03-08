@@ -5,12 +5,12 @@
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <p class="uppercase tracking-loose w-full">What business are you?</p>
+        <p class="uppercase tracking-loose w-full">{{ __('home.bigContainer.title') }}</p>
         <h1 class="my-4 text-5xl font-bold leading-tight">
-            Main Hero Message to sell yourself!
+            {{ __('home.bigContainer.main')}}
         </h1>
         <p class="leading-normal text-2xl mb-8">
-            Sub-hero message, not too long and not too short. Make it just right!
+            {!! __('home.bigContainer.downText') !!}
         </p>
         </div>
         <!--Right Col-->
