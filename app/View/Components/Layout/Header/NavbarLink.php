@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class NavbarLink extends Component
 {
-    public $classNames;
+    public string $classNames;
 
     /**
      * Create a new component instance.

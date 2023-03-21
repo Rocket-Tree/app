@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 
 class NavbarLinks extends Component
 {
+    /** @var string[] $links */
     public array $links;
 
     public string $active;
@@ -23,7 +24,7 @@ class NavbarLinks extends Component
             'about' => '#',
             'contact' => '#',
         ];
-        $this->active = route(Route::currentRouteName());
+        $this->active = Route::currentRouteName() ? route(Route::currentRouteName()) : route('home');
     }
 
     /**

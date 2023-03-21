@@ -10,15 +10,28 @@ class CountryFlags extends Component
 {
     public string $current;
 
-    public array  $langs;
+    /**
+     * @var string[] $langs
+     */
+    public array $langs = ['es' => 'es', 'en' => 'us', 'cn' => 'cn'];
 
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        $this->current = session()->has('flag') ? session()->get('flag') : 'es';
-        $this->langs = ['es' => 'es', 'en' => 'us', 'cn' => 'cn'];
+
+        $this->current = $this->getLang();
+    }
+
+    private function getLang(): string
+    {
+        $lang  = session()->get('flag', 'es');
+        if (!is_string($lang)){
+            throw new \Exception("The flag must be a string");
+        }
+
+        return $lang;
     }
 
     /**

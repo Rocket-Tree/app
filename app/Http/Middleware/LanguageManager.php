@@ -15,7 +15,7 @@ class LanguageManager
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (session()->has('locale')) {
+        if (session()->has('locale') && is_string(session()->get('locale'))) {
             app()->setLocale(session()->get('locale'));
             $flags = ['es' => 'es', 'en' => 'us', 'cn' => 'cn'];
             session()->put('flag', $flags[session()->get('locale')]);
