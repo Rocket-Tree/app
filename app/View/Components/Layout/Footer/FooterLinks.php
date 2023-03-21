@@ -13,7 +13,6 @@ class FooterLinks extends Component
      */
     public function __construct(public string $title, public string $links)
     {
-
     }
 
     /**

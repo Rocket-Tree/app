@@ -3,14 +3,16 @@
 namespace App\View\Components\Layout\Header;
 
 use Closure;
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\Component;
 
 class NavbarLinks extends Component
 {
     public array $links;
+
     public string $active;
+
     /**
      * Create a new component instance.
      */
@@ -19,7 +21,7 @@ class NavbarLinks extends Component
         $this->links = [
             'home' => route('home'),
             'about' => '#',
-            'contact' => '#'
+            'contact' => '#',
         ];
         $this->active = route(Route::currentRouteName());
     }

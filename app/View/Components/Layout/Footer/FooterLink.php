@@ -8,13 +8,11 @@ use Illuminate\View\Component;
 
 class FooterLink extends Component
 {
-
     /**
      * Create a new component instance.
      */
     public function __construct(public string $href, public string $text)
     {
-        
     }
 
     /**

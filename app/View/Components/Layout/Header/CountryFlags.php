@@ -3,14 +3,15 @@
 namespace App\View\Components\Layout\Header;
 
 use Closure;
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Cookie;
+use Illuminate\View\Component;
 
 class CountryFlags extends Component
 {
     public string $current;
+
     public array  $langs;
+
     /**
      * Create a new component instance.
      */
