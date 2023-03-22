@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 
 class NavbarLinks extends Component
 {
-    /** @var string[] $links */
+    /** @var string[] */
     public array $links;
 
     public string $active;

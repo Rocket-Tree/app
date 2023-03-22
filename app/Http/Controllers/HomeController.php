@@ -14,7 +14,6 @@ class HomeController extends Controller
 
     public function lang(string $lang): RedirectResponse
     {
-
         if (in_array($lang, $this->getLocales())) {
             app()->setLocale($lang);
             session()->put('locale', $lang);

@@ -11,7 +11,7 @@ class CountryFlags extends Component
     public string $current;
 
     /**
-     * @var string[] $langs
+     * @var string[]
      */
     public array $langs = ['es' => 'es', 'en' => 'us', 'cn' => 'cn'];
 
@@ -20,15 +20,14 @@ class CountryFlags extends Component
      */
     public function __construct()
     {
-
         $this->current = $this->getLang();
     }
 
     private function getLang(): string
     {
-        $lang  = session()->get('flag', 'es');
-        if (!is_string($lang)){
-            throw new \Exception("The flag must be a string");
+        $lang = session()->get('flag', 'es');
+        if (! is_string($lang)) {
+            throw new \Exception('The flag must be a string');
         }
 
         return $lang;
